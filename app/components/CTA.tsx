@@ -1,6 +1,11 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation"
 
 export default function CTA() {
+  const router = useRouter()
+  
   return (
     <section className="w-full py-12 md:py-24 bg-white">
       <div className="container px-4 md:px-6 mx-auto">
@@ -41,7 +46,7 @@ export default function CTA() {
               Reach out today to become a strategic partner.
             </p>
             <div className="flex justify-center">
-              <Button size="lg" variant="secondary">
+              <Button size="lg" variant="secondary" onClick={() => router.push('/contact')}>
                 Contact Us
               </Button>
             </div>

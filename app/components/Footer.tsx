@@ -15,7 +15,10 @@ export default function Footer() {
             <Link href="#" className="text-sm text-gray-600 hover:text-gray-900">
               Terms of Service
             </Link>
-            <Link href="#" className="text-sm text-gray-600 hover:text-gray-900">
+            <Link 
+              href="/contact" 
+              className="text-sm text-gray-600 hover:text-gray-900"
+            >
               Contact
             </Link>
           </nav>

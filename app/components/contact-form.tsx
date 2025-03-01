@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
-export default function ContactUs() {
+export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,11 +36,7 @@ export default function ContactUs() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...formData,
-          // You can set recipient here or in your API
-          to: 'your-email@example.com', 
-        }),
+        body: JSON.stringify(formData),
       })
       
       if (response.ok) {
@@ -79,7 +75,7 @@ export default function ContactUs() {
               href="mailto:your-email@example.com" 
               className="text-blue-600 hover:underline"
             >
-              your-email@example.com
+              info@aventindustrial.com
             </a>
           </p>
         </div>
@@ -103,100 +99,40 @@ export default function ContactUs() {
                   </Button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Your name
-                      </label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        placeholder="Your name"
-                        required
-                        className="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Your email
-                      </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="Your email"
-                        required
-                        className="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                        Phone number (optional)
-                      </label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="Your phone number"
-                        className="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                        Company (optional)
-                      </label>
-                      <Input
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        placeholder="Your company"
-                        className="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Your message
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Your message"
-                      required
-                      rows={6}
-                      className="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label htmlFor="name" className="block mb-2">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      className="w-full p-2 border rounded"
                     />
                   </div>
-                  
-                  <div className="text-center">
-                    <Button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full md:w-auto px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-md transition-colors"
-                    >
-                      {isSubmitting ? 'Sending...' : 'Send message'}
-                    </Button>
-                    
-                    {formStatus === 'error' && (
-                      <p className="mt-4 text-red-600">
-                        Something went wrong. Please try again or email us directly.
-                      </p>
-                    )}
+                  <div>
+                    <label htmlFor="email" className="block mb-2">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      className="w-full p-2 border rounded"
+                    />
                   </div>
+                  <div>
+                    <label htmlFor="message" className="block mb-2">Message</label>
+                    <textarea
+                      id="message"
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      className="w-full p-2 border rounded"
+                      rows={4}
+                    />
+                  </div>
+                  <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded">
+                    Send Message
+                  </button>
                 </form>
               )}
             </div>

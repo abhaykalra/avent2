@@ -18,7 +18,6 @@ export default function Home() {
       <Benefits />
       <Benefits1 />
       <Benefits2 />
-      <UseCases />
       <CTA />
       <Footer />
     </main>

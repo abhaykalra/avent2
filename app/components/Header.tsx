@@ -4,10 +4,22 @@ import type React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { useRouter, usePathname } from "next/navigation"
 
 export default function Header() {
+  const router = useRouter()
+  const pathname = usePathname()
+
   const scrollToSection = (id?: string) => (e: React.MouseEvent) => {
     e.preventDefault()
+    
+    // If we're not on the home page, navigate to home first
+    if (pathname !== '/') {
+      router.push(`/${id ? '#' + id : ''}`)
+      return
+    }
+    
+    // If we're already on home page, scroll to section
     if (id) {
       const element = document.getElementById(id)
       if (element) {
@@ -32,28 +44,28 @@ export default function Header() {
       </Link>
       <nav className="hidden md:flex space-x-4 lg:space-x-6">
         <a
-          href="#benefits1"
+          href="/#benefits1"
           onClick={scrollToSection("benefits1")}
           className="text-sm font-medium text-gray-700 hover:text-gray-900 cursor-pointer"
         >
           Features
         </a>
         <a
-          href="#demo"
+          href="/#demo"
           onClick={scrollToSection("demo")}
           className="text-sm font-medium text-gray-700 hover:text-gray-900 cursor-pointer"
         >
           About
         </a>
         <a
-          href="#use-cases"
+          href="/#use-cases"
           onClick={scrollToSection("use-cases")}
           className="text-sm font-medium text-gray-700 hover:text-gray-900 cursor-pointer"
         >
           Use Cases
         </a>
       </nav>
-      <Button>Get in Touch</Button>
+      <Button onClick={() => router.push('/contact')}>Get in Touch</Button>
     </header>
   )
 }
