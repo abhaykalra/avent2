@@ -158,22 +158,28 @@ type FeatureItemProps = {
 
 const FeatureItem = ({ icon, title, description }: FeatureItemProps) => {
   return (
-    <div className="mb-8">
-      <div className="flex items-center mb-2">
-        <div className="mr-3">{icon}</div>
-        <h3 className="text-xl font-semibold">{title}</h3>
+    <div className="mb-12">
+      <div className="flex items-center mb-4">
+        <div className="mr-4">
+          <div className="h-8 w-8">
+            {icon}
+          </div>
+        </div>
+        <h3 className="text-2xl font-medium">{title}</h3>
       </div>
-      <p className="text-gray-600">{description}</p>
+      <p className="text-lg text-gray-600">{description}</p>
     </div>
   )
 }
 
 export default function Benefits1() {
   return (
-    <section id="benefits1" className="relative w-full min-h-screen py-16 bg-white">
+    <section id="benefits1" className="relative w-full py-16 md:py-24 lg:py-32 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto mb-12 text-center">
-          <h2 className="text-4xl font-bold mb-4">Personalized Customer Engagement</h2>
+          <h2 className="text-3xl font-medium tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-center mb-16">
+            Personalized Customer Engagement
+          </h2>
           <p className="text-xl text-gray-600">
             Meet Customers on Their Terms. With AI you can take orders from every medium, with zero friction.
           </p>
@@ -196,7 +202,7 @@ export default function Benefits1() {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
+                  className="h-8 w-8"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="url(#icon-gradient)"
@@ -211,7 +217,7 @@ export default function Benefits1() {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
+                  className="h-8 w-8"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="url(#icon-gradient)"
@@ -226,7 +232,7 @@ export default function Benefits1() {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
+                  className="h-8 w-8"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="url(#icon-gradient)"

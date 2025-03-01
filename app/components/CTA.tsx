@@ -39,14 +39,19 @@ export default function CTA() {
           
           {/* Content */}
           <div className="relative z-10">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-6 text-center text-black">
+            <h2 className="text-3xl font-medium tracking-tighter sm:text-4xl md:text-5xl mb-6 text-center text-black">
               Ready to Supercharge Your Sales Team with AI?
             </h2>
             <p className="mx-auto max-w-[700px] text-lg mb-8 text-center text-black">
               Reach out today to become a strategic partner.
             </p>
             <div className="flex justify-center">
-              <Button size="lg" variant="secondary" onClick={() => router.push('/contact')}>
+              <Button 
+                size="lg" 
+                variant="secondary" 
+                onClick={() => router.push('/contact')}
+                className="bg-white hover:bg-gray-50"
+              >
                 Contact Us
               </Button>
             </div>

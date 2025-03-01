@@ -126,31 +126,41 @@ type FeatureItemProps = {
 
 const FeatureItem = ({ icon, title, description }: FeatureItemProps) => {
   return (
-    <div className="mb-8">
-      <div className="flex items-center mb-2">
-        <div className="mr-3">{icon}</div>
-        <h3 className="text-xl font-semibold">{title}</h3>
+    <div className="mb-12">
+      <div className="flex items-center mb-4">
+        <div className="mr-4">
+          <div className="h-8 w-8">
+            {icon}
+          </div>
+        </div>
+        <h3 className="text-2xl font-medium">
+          {title}
+        </h3>
       </div>
-      <p className="text-gray-600">{description}</p>
+      <p className="text-lg text-gray-600">
+        {description}
+      </p>
     </div>
   )
 }
 
 export default function Benefits2() {
   return (
-    <section className="relative w-full min-h-screen py-16 bg-white">
+    <section className="relative w-full py-16 md:py-24 lg:py-32 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto mb-12 text-center">
-          <h2 className="text-4xl font-bold mb-4">Seamlessly Connect with Your Existing Systems</h2>
+        <div className="max-w-4xl mx-auto mb-20 text-center">
+          <h2 className="text-3xl font-medium tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-center mb-16">
+            Seamlessly Connect with Your Existing Systems
+          </h2>
           <p className="text-xl text-gray-600">
             Easily connect our AI solutions with your existing systems for a unified workflow that enhances productivity
             across your organization.
           </p>
         </div>
 
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-8 max-w-6xl mx-auto">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
           {/* Left side - Features */}
-          <div className="w-full lg:w-1/2 px-4 lg:px-8">
+          <div className="w-full lg:w-1/2">
             <FeatureItem
               icon={
                 <svg
@@ -214,7 +224,7 @@ export default function Benefits2() {
           </div>
 
           {/* Right side - Logo Marquee */}
-          <div className="w-full lg:w-1/2 flex items-center justify-center px-4 lg:px-8">
+          <div className="w-full lg:w-1/2">
             <LogoMarquee />
           </div>
         </div>
