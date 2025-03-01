@@ -4,6 +4,7 @@ import type React from "react"
 import { forwardRef, useRef, useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
 import { AnimatedBeam } from "./animatedbeam"
+import { ScrollAnimation } from "./ScrollAnimation"
 
 // Circle component for the animated beam
 const Circle = forwardRef(({ className, children }, ref) => {
@@ -175,82 +176,84 @@ const FeatureItem = ({ icon, title, description }: FeatureItemProps) => {
 export default function Benefits1() {
   return (
     <section id="benefits1" className="relative w-full py-16 md:py-24 lg:py-32 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto mb-12 text-center">
-          <h2 className="text-3xl font-medium tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-center mb-16">
-            Personalized Customer Engagement
-          </h2>
-          <p className="text-xl text-gray-600">
-            Meet Customers on Their Terms. With AI you can take orders from every medium, with zero friction.
-          </p>
-        </div>
-
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Left side - Animated Beam Component */}
-          <div className="w-full lg:w-1/2 relative aspect-square rounded-3xl overflow-hidden">
-            <div
-              className="absolute inset-0 w-full h-full rounded-3xl z-10 border-gray-500"
-              style={{ borderWidth: "0.1px" }}
-              aria-hidden="true"
-            />
-            <AnimatedBeamDemo />
+      <ScrollAnimation>
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto mb-12 text-center">
+            <h2 className="text-3xl font-medium tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-center mb-16">
+              Personalized Customer Engagement
+            </h2>
+            <p className="text-xl text-gray-600">
+              Meet Customers on Their Terms. With AI you can take orders from every medium, with zero friction.
+            </p>
           </div>
 
-          {/* Right side - Features */}
-          <div className="w-full lg:w-1/2">
-            <FeatureItem
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="url(#icon-gradient)"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              }
-              title="Voice"
-              description="Guides sales reps through complex catalogs during customer calls, ensuring accurate product selection and availability information without delays. Autonomous agents to handle overload and afterhours."
-            />
-            <FeatureItem
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="url(#icon-gradient)"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              }
-              title="Real-time Responses"
-              description="Deliver instant, contextually relevant information to customers when they need, wherever they need it. Instant responses to product, pricing, and availability questions"
-            />
-            <FeatureItem
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="url(#icon-gradient)"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              }
-              title="Document Intelligence"
-              description="Intelligent parsing of purchase orders, RFQs, and technical specifications. Extracts critical information with perfect accuracy, automating ERP data entry"
-            />
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            {/* Left side - Animated Beam Component */}
+            <div className="w-full lg:w-1/2 relative aspect-square rounded-3xl overflow-hidden">
+              <div
+                className="absolute inset-0 w-full h-full rounded-3xl z-10 border-gray-500"
+                style={{ borderWidth: "0.1px" }}
+                aria-hidden="true"
+              />
+              <AnimatedBeamDemo />
+            </div>
+
+            {/* Right side - Features */}
+            <div className="w-full lg:w-1/2">
+              <FeatureItem
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-8 w-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="url(#icon-gradient)"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                }
+                title="Voice"
+                description="Guides sales reps through complex catalogs during customer calls, ensuring accurate product selection and availability information without delays. Autonomous agents to handle overload and afterhours."
+              />
+              <FeatureItem
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-8 w-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="url(#icon-gradient)"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                }
+                title="Real-time Responses"
+                description="Deliver instant, contextually relevant information to customers when they need, wherever they need it. Instant responses to product, pricing, and availability questions"
+              />
+              <FeatureItem
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-8 w-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="url(#icon-gradient)"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                }
+                title="Document Intelligence"
+                description="Intelligent parsing of purchase orders, RFQs, and technical specifications. Extracts critical information with perfect accuracy, automating ERP data entry"
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </ScrollAnimation>
 
       {/* SVG gradient definition for icons */}
       <svg width="0" height="0" className="absolute">

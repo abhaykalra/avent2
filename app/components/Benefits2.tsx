@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
+import { ScrollAnimation } from "./ScrollAnimation"
 
 // Logo Marquee Component
 const LogoMarquee = () => {
@@ -147,88 +148,90 @@ const FeatureItem = ({ icon, title, description }: FeatureItemProps) => {
 export default function Benefits2() {
   return (
     <section className="relative w-full py-16 md:py-24 lg:py-32 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto mb-20 text-center">
-          <h2 className="text-3xl font-medium tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-center mb-16">
-            Seamlessly Connect with Your Existing Systems
-          </h2>
-          <p className="text-xl text-gray-600">
-            Easily connect our AI solutions with your existing systems for a unified workflow that enhances productivity
-            across your organization.
-          </p>
-        </div>
-
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
-          {/* Left side - Features */}
-          <div className="w-full lg:w-1/2">
-            <FeatureItem
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="url(#icon-gradient)"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
-                  />
-                </svg>
-              }
-              title="Technology Integration"
-              description="Direct connections with Epicor, SAP, Oracle, Microsoft Dynamics, and custom systems. Sync with product information management systems for real-time catalog updates."
-            />
-            <FeatureItem
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="url(#icon-gradient)"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                  />
-                </svg>
-              }
-              title="Secure Data Exchange"
-              description="Maintain data integrity and security with enterprise-grade encryption and compliance protocols. Cloud-based, on-premises, or hybrid deployment options to match your IT infrastructure."
-            />
-            <FeatureItem
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="url(#icon-gradient)"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-                  />
-                </svg>
-              }
-              title="Customizable Workflows"
-              description="Design and implement tailored automation sequences that adapt to your unique business processes. Our agents handle your custom business logic, rules, and processes, with zero IT overhead."
-            />
+      <ScrollAnimation>
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto mb-20 text-center">
+            <h2 className="text-3xl font-medium tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-center mb-16">
+              Seamlessly Connect with Your Existing Systems
+            </h2>
+            <p className="text-xl text-gray-600">
+              Easily connect our AI solutions with your existing systems for a unified workflow that enhances productivity
+              across your organization.
+            </p>
           </div>
 
-          {/* Right side - Logo Marquee */}
-          <div className="w-full lg:w-1/2">
-            <LogoMarquee />
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
+            {/* Left side - Features */}
+            <div className="w-full lg:w-1/2">
+              <FeatureItem
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="url(#icon-gradient)"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                    />
+                  </svg>
+                }
+                title="Technology Integration"
+                description="Direct connections with Epicor, SAP, Oracle, Microsoft Dynamics, and custom systems. Sync with product information management systems for real-time catalog updates."
+              />
+              <FeatureItem
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="url(#icon-gradient)"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                    />
+                  </svg>
+                }
+                title="Secure Data Exchange"
+                description="Maintain data integrity and security with enterprise-grade encryption and compliance protocols. Cloud-based, on-premises, or hybrid deployment options to match your IT infrastructure."
+              />
+              <FeatureItem
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="url(#icon-gradient)"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                    />
+                  </svg>
+                }
+                title="Customizable Workflows"
+                description="Design and implement tailored automation sequences that adapt to your unique business processes. Our agents handle your custom business logic, rules, and processes, with zero IT overhead."
+              />
+            </div>
+
+            {/* Right side - Logo Marquee */}
+            <div className="w-full lg:w-1/2">
+              <LogoMarquee />
+            </div>
           </div>
         </div>
-      </div>
+      </ScrollAnimation>
 
       {/* SVG gradient definition for icons */}
       <svg width="0" height="0" className="absolute">
