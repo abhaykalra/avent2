@@ -6,20 +6,25 @@ import { useRouter } from "next/navigation"
 function FloatingPaths({ position }: { position: number }) {
   const paths = Array.from({ length: 24 }, (_, i) => ({
     id: i,
-    d: `M-${280 - i * 5 * position} -${89 + i * 4}C-${
-      280 - i * 5 * position
-    } -${89 + i * 4} -${212 - i * 5 * position} ${116 - i * 4} ${
-      102 - i * 5 * position
-    } ${243 - i * 4}C${516 - i * 5 * position} ${370 - i * 4} ${
-      584 - i * 5 * position
-    } ${575 - i * 4} ${584 - i * 5 * position} ${575 - i * 4}`,
+    d: `M-${380 - i * 5 * position} -${159 + i * 4}C-${
+      380 - i * 5 * position
+    } -${159 + i * 4} -${312 - i * 5 * position} ${-14 - i * 4} ${
+      2 - i * 5 * position
+    } ${123 - i * 4}C${416 - i * 5 * position} ${250 - i * 4} ${
+      484 - i * 5 * position
+    } ${355 - i * 4} ${484 - i * 5 * position} ${355 - i * 4}`,
     color: `rgba(15,23,42,${0.1 + i * 0.03})`,
     width: 0.5 + i * 0.03,
   }))
 
   return (
     <div className="absolute inset-0 pointer-events-none">
-      <svg className="w-full h-full text-slate-950 dark:text-white opacity-30" viewBox="0 0 696 216" fill="none">
+      <svg 
+        className="w-full h-full text-slate-950 dark:text-white opacity-30" 
+        viewBox="0 0 696 216" 
+        fill="none"
+        style={{ transform: 'translateY(-30%)' }}
+      >
         {paths.map((path) => (
           <motion.path
             key={path.id}
