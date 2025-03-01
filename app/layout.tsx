@@ -6,9 +6,11 @@ import type React from "react" // Import React
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Sumbios Navigator",
-  description: "Simplify complexity with AI-driven graph visualization and collaboration",
-    generator: 'v0.dev'
+  title: "Avent",
+  description: "Transform Industrial Distribution with AI Agents",
+  icons: {
+    icon: '/aventlogo.ico',
+  }
 }
 
 export default function RootLayout({
