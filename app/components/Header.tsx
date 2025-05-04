@@ -44,25 +44,18 @@ export default function Header() {
       </Link>
       <nav className="hidden md:flex space-x-4 lg:space-x-6">
         <a
+          href="/#use-cases"
+          onClick={scrollToSection("benefits")}
+          className="text-sm font-medium text-gray-700 hover:text-gray-900 cursor-pointer"
+        >
+          Use Cases
+        </a>
+        <a
           href="/#benefits1"
           onClick={scrollToSection("benefits1")}
           className="text-sm font-medium text-gray-700 hover:text-gray-900 cursor-pointer"
         >
           Features
-        </a>
-        <a
-          href="/#demo"
-          onClick={scrollToSection("demo")}
-          className="text-sm font-medium text-gray-700 hover:text-gray-900 cursor-pointer"
-        >
-          About
-        </a>
-        <a
-          href="/#use-cases"
-          onClick={scrollToSection("use-cases")}
-          className="text-sm font-medium text-gray-700 hover:text-gray-900 cursor-pointer"
-        >
-          Use Cases
         </a>
       </nav>
       <Button onClick={() => router.push('/contact')}>Get in Touch</Button>
