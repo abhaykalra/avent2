@@ -8,16 +8,16 @@ import { ScrollAnimation } from "./ScrollAnimation"
 const LogoMarquee = () => {
   // Removed Oracle NetSuite from upper marquee
   const [logos] = useState([
-    "https://imflvurocidruuiokmzq.supabase.co/storage/v1/object/public/images//sap-3.svg",
-    "https://imflvurocidruuiokmzq.supabase.co/storage/v1/object/public/images//infor-1.svg",
-    "https://imflvurocidruuiokmzq.supabase.co/storage/v1/object/public/images//Dynamics365_scalable.svg",
-    "https://imflvurocidruuiokmzq.supabase.co/storage/v1/object/public/images//epicor-logo.svg",
+    "https://gkkolkvmncqorlemaiwo.supabase.co/storage/v1/object/public/images//sap-3.svg",
+    "https://gkkolkvmncqorlemaiwo.supabase.co/storage/v1/object/public/images//infor-1.svg",
+    "https://gkkolkvmncqorlemaiwo.supabase.co/storage/v1/object/public/images//Dynamics365_scalable.svg",
+    "https://gkkolkvmncqorlemaiwo.supabase.co/storage/v1/object/public/images//epicor-logo.svg",
   ])
 
   const [bottomLogos] = useState([
-    "https://imflvurocidruuiokmzq.supabase.co/storage/v1/object/public/images//oracle-netsuite-svgrepo-com.svg",
-    "https://imflvurocidruuiokmzq.supabase.co/storage/v1/object/public/images//ZOHO_logo_2023.svg",
-    "https://imflvurocidruuiokmzq.supabase.co/storage/v1/object/public/images//Cin7_idlUNvOPj3_0.svg",
+    "https://gkkolkvmncqorlemaiwo.supabase.co/storage/v1/object/public/images//oracle-netsuite-svgrepo-com.svg",
+    "https://gkkolkvmncqorlemaiwo.supabase.co/storage/v1/object/public/images//ZOHO_logo_2023.svg",
+    "https://gkkolkvmncqorlemaiwo.supabase.co/storage/v1/object/public/images//Cin7_idlUNvOPj3_0.svg",
   ])
 
   // Custom size adjustments for specific logos

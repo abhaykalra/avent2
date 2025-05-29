@@ -25,14 +25,14 @@ Circle.displayName = "Circle"
 
 // Define the Icons object with the provided URLs
 const Icons = {
-  googleDocs: "https://imflvurocidruuiokmzq.supabase.co/storage/v1/object/public/images//fax-machine-svgrepo-com.svg",
+  googleDocs: "https://gkkolkvmncqorlemaiwo.supabase.co/storage/v1/object/public/images//fax-machine-svgrepo-com.svg",
   notion:
-    "https://imflvurocidruuiokmzq.supabase.co/storage/v1/object/public/images//whatsapp-icon-logo-svgrepo-com.svg",
-  messenger: "https://imflvurocidruuiokmzq.supabase.co/storage/v1/object/public/images//pdf-svgrepo-com.svg",
-  whatsapp: "https://imflvurocidruuiokmzq.supabase.co/storage/v1/object/public/images//outlook-svgrepo-com.svg",
-  zapier: "https://imflvurocidruuiokmzq.supabase.co/storage/v1/object/public/images//handshake-svgrepo-com.svg",
-  googleDrive: "https://imflvurocidruuiokmzq.supabase.co/storage/v1/object/public/images//apple-phone.svg",
-  openai: "https://imflvurocidruuiokmzq.supabase.co/storage/v1/object/public/images//aventlogo.svg",
+    "https://gkkolkvmncqorlemaiwo.supabase.co/storage/v1/object/public/images//whatsapp-icon-logo-svgrepo-com.svg",
+  messenger: "https://gkkolkvmncqorlemaiwo.supabase.co/storage/v1/object/public/images//pdf-svgrepo-com.svg",
+  whatsapp: "https://gkkolkvmncqorlemaiwo.supabase.co/storage/v1/object/public/images//outlook-svgrepo-com.svg",
+  zapier: "https://gkkolkvmncqorlemaiwo.supabase.co/storage/v1/object/public/images//handshake-svgrepo-com.svg",
+  googleDrive: "https://gkkolkvmncqorlemaiwo.supabase.co/storage/v1/object/public/images//apple-phone.svg",
+  openai: "https://gkkolkvmncqorlemaiwo.supabase.co/storage/v1/object/public/images//aventlogo.svg",
 }
 
 // Animated Beam Component
