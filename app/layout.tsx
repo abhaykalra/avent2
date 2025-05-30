@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Avent",
   description: "Transform Industrial Distribution with AI Agents",
   icons: {
-    icon: '/aventlogo.ico',
+    icon: '/avent.ico',
   }
 }
 
