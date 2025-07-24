@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <span className="text-sm text-gray-600">&copy; 2025 Avent. All rights reserved.</span>
+            <span className="text-sm text-gray-600">&copy; 2025 Avent Industrial Inc. All rights reserved.</span>
           </div>
           <nav className="flex space-x-4">
             <Link href="/privacy" className="text-sm text-gray-600 hover:text-gray-900">

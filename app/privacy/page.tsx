@@ -61,7 +61,7 @@ export default function PrivacyPolicy() {
             
             <h2 className="text-2xl font-medium mt-8 mb-4">1. Introduction</h2>
             <p className="mb-4">
-              Avent Technology LLC ("Avent," "we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website aventindustrial.com (the "Site") or use our products and services (collectively, the "Services").
+              Avent Industrial Inc. ("Avent," "we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website aventindustrial.com (the "Site") or use our products and services (collectively, the "Services").
             </p>
             <p className="mb-4">
               Please read this Privacy Policy carefully. By accessing or using our Services, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy. If you do not agree with our policies and practices, please do not use our Services.
@@ -250,7 +250,7 @@ export default function PrivacyPolicy() {
               If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:
             </p>
             <p className="mb-4">
-              Avent Technology LLC<br />
+              Avent Industrial Inc.<br />
               Email: privacy@aventindustrial.com<br />
               Website: https://www.aventindustrial.com
             </p>

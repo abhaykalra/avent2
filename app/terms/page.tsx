@@ -61,7 +61,7 @@ export default function TermsOfService() {
             
             <h2 className="text-2xl font-medium mt-8 mb-4">1. Introduction</h2>
             <p className="mb-4">
-              Welcome to aventindustrial.com (the "Site"), owned and operated by Avent Technology LLC ("Avent," "we," "us," or "our"). These Terms of Service ("Terms") govern your access to and use of our Site, software, products, and services (collectively, the "Services").
+              Welcome to aventindustrial.com (the "Site"), owned and operated by Avent Industrial Inc. ("Avent," "we," "us," or "our"). These Terms of Service ("Terms") govern your access to and use of our Site, software, products, and services (collectively, the "Services").
             </p>
             <p className="mb-4">
               By accessing or using our Services, you agree to be bound by these Terms. If you do not agree to these Terms, you may not access or use the Services.
@@ -205,7 +205,7 @@ export default function TermsOfService() {
               If you have any questions about these Terms, please contact us at:
             </p>
             <p className="mb-4">
-              Avent Technology LLC<br />
+              Avent Industrial Inc.<br />
               Email: legal@aventindustrial.com<br />
               Website: https://www.aventindustrial.com
             </p>
