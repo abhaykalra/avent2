@@ -47,26 +47,29 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
     }
 
-    // Autoresponder to submitter
-    const autoReplyHtml = `
-      <p>Hi ${name},</p>
-      <p>Thanks for reaching out. We've received your message and will get back to you shortly.</p>
-      <hr />
-      <p><strong>Your message:</strong></p>
-      <p>${message.replace(/\n/g, '<br>')}</p>
-      <p>— Avent Team</p>
-    `;
+    // Optional autoresponder (paused by default)
+    const enableAutoReply = process.env.ENABLE_CONTACT_AUTOREPLY === 'true';
+    if (enableAutoReply) {
+      const autoReplyHtml = `
+        <p>Hi ${name},</p>
+        <p>Thanks for reaching out. We've received your message and will get back to you shortly.</p>
+        <hr />
+        <p><strong>Your message:</strong></p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
+        <p>— Avent Team</p>
+      `;
 
-    const { error: autoError } = await resend.emails.send({
-      from: emailFrom,
-      to: [email],
-      subject: 'We received your message',
-      html: autoReplyHtml,
-      replyTo: emailTo,
-    });
-    if (autoError) {
-      console.error('Resend autoresponder error:', autoError);
-      // Do not fail the whole request; log and continue
+      const { error: autoError } = await resend.emails.send({
+        from: emailFrom,
+        to: [email],
+        subject: 'We received your message',
+        html: autoReplyHtml,
+        replyTo: emailTo,
+      });
+      if (autoError) {
+        console.error('Resend autoresponder error:', autoError);
+        // Do not fail the whole request; log and continue
+      }
     }
 
     return NextResponse.json({ success: true });
